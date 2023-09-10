@@ -26,35 +26,36 @@ This project consisted of creating a tool using neural networks and machine lear
 
 • IS_SUCCESSFUL—Was the money used effectively  
 
-# Data Preprocessing:
+### Data Preprocessing:
 
-### What variable(s) are the target(s) for my model?
+* What variable(s) are the target(s) for my model?
 
 “IS_SUCCESSFUL” is my target.
 
-### What variable(s) are the features for my model? 
+* What variable(s) are the features for my model? 
 
 “APPLICATION_TYPE”,” AFFILIATION”, “CLASSIFICATION”,” USE_CASE”,” ORGANIZATION”,” INCOME_AMT”,” SPECIAL_CONSIDERATIONS”,” ASK_AMT” are the features for my model.
 
-### What variable(s) should be removed from the input data because they are neither targets nor features?
+* What variable(s) should be removed from the input data because they are neither targets nor features?
+
 EIN and NAME: Drop 
 STATUS: Filter “STATUS==1 ’ then Drop whole column
 
-# Model Compilation, Training, and Evaluation:
+### Model Compilation, Training, and Evaluation:
 
-### How many neurons, layers, and activation functions did you select for your neural network model, and why?
+* How many neurons, layers, and activation functions did you select for your neural network model, and why?
 
 I defined the model for analysis by determining the number of input features and hidden nodes per layer. I trained the model and tested its fitness through multiple iterations.
 Were you able to achieve the target model performance?
 Unfortunately, I couldn’t optimize my model to achieve the target accuracy. Accuracy : 0.72
 
-### What steps did you take in your attempts to increase model performance?
+* What steps did you take in your attempts to increase model performance?
 
 1. Removing T12, T2, T25, T14, T29, T15, T17 in the 'APPLICATION_TYPE' column as the number of each record is too less and it may cause confusion in the model.  
 2. In the ' CLASSIFICATION’ column, dropping where the total record of CLASSIFICATION is less than 20 for the same reason from above.  
 3. In the ' STATUS’ column, filter where 'STATUS'==1 then drop the column as the number of record which 'STATUS'==0 is 5 while 34294 records of 'STATUS'==0  
 
-# Summary:
+### Summary:
 
 The project's preferred accuracy score of 75% was not attained; however, a score of 72% was attained after multiple iterations of the model. A different classification model could be used for future attempts at increasing the accuracy score.
 In general, compared to the result in the first classifier model, the optimized model has almost the same rate.
